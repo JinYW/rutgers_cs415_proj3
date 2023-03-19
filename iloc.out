@@ -1,0 +1,24 @@
+	// Assign STATIC_AREA_ADDRESS to register "r0"
+ 	 loadI 1024 	=> r0 
+	// Compute address of variable "a" at offset 1028 in register 1
+ 	 loadI 1028 	=> r1 
+ 	 loadI 1 	=> r2 
+ 	 store r2 	=> r1 
+	// Compute address of variable "b" at offset 1032 in register 3
+ 	 loadI 1032 	=> r3 
+ 	 loadI 2 	=> r4 
+ 	 store r4 	=> r3 
+	// Compute address of variable "a" at offset 1028 in register 5
+ 	 loadI 1028 	=> r5 
+	// Compute address of variable "a" at offset 1028 in register 6
+ 	 loadAI r0, 4 	=> r6 
+	// Compute address of variable "b" at offset 1032 in register 7
+ 	 loadAI r0, 8 	=> r7 
+ 	 add r6, r7 	=> r8 
+ 	 store r8 	=> r5 
+	// Compute address of variable "a" at offset 1028 in register 9
+ 	 loadAI r0, 4 	=> r9 
+ 	 output 1028
+	// Compute address of variable "b" at offset 1032 in register 10
+ 	 loadAI r0, 8 	=> r10 
+ 	 output 1032

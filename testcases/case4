@@ -1,0 +1,15 @@
+program main;
+var a, b: integer;
+    cc: boolean;
+begin
+  a := 1;
+  b := 2;
+  cc := true;
+  while cc do
+    begin
+      a := a + 1;
+      cc := false
+    end;
+  writeln(a);
+  writeln(b)
+end.
