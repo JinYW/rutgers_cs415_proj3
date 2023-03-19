@@ -63,6 +63,7 @@ vardcl	: idlist ':' type {
                             // only store pair<char,int> (var, 0) in array.
                             // set a global value id_count and idlist_size = 0 to record the number of element in one vardcl.  
                             //TOD: need to update table entry later.
+                            //update here later.
 } 
 	;
 
