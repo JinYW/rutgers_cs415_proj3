@@ -9,16 +9,24 @@
 #include <string.h>
 #include "attr.h"
 
+
+static int idlist_size = 0; 
+static int id_count = 0; 
+
+
 typedef struct { /* need to augment this */
     char *name;
-    int offset;
+    int address;
 } varMapEntry;
+
+static varMapEntry **HashTable;
+
 
 extern void InitSymbolTable();
 
 extern varMapEntry* lookup(char *name);
 
-extern void insert(char *name, int offset);
+extern void insert(char *name, int address);
 
 extern void PrintSymbolTable();
 
